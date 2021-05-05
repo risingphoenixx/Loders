@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Loaders</title>
+  <link rel="stylesheet" href="css/index.css" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+}
+
+.center-content {
+  width: 100%;
+  max-width: 130em;
+  margin: 0 auto;
+  position: relative;
+}
+
+body {
+  width: 100%;
+  height: auto;
+}
+body .bg-lp {
+  width: 100%;
+  height: 100vh;
+  display: block;
+  margin: 0 auto;
+  background-image: url("https://assets.teenvogue.com/photos/60391b461951669a86a16c7e/16:9/w_2560%2Cc_limit/Ginny%26Georgia_Season1_Episode8_00_38_04_12R.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  z-index: 999;
+}
+body .faf.fa-times {
+  color: rgba(255, 255, 255, 0.72);
+  display: block;
+  position: absolute;
+  right: 0;
+  font-family: FontAwesome;
+  z-index: 999999999;
+  font-size: 3em;
+  margin: 0 0.5em;
+  font-style: italic;
+  font-weight: 100;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+body .faf.fa-times:hover {
+  color: #fff;
+}
+body .mask {
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 99999999;
+}
+
+.loading {
+  width: 160px;
+  height: 160px;
+  border-radius: 150px;
+  border: 15px solid #fff;
+  border-top-color: rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -80px;
+  margin-left: -80px;
+  animation: loading 1.2s linear infinite;
+  z-index: 999999999;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.text-left {
+  color: #fff;
+  z-index: 999999999;
+  width: 50%;
+  height: auto;
+  position: absolute;
+  font-size: 1.4em;
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 700;
+  margin: 2em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.text-left h1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.text-left small {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@media only screen and (max-device-width: 600px) {
+  .text-left {
+    margin: 5em auto;
+    text-align: center;
+    display: block;
+    width: 95%;
+  }
+
+  .loading {
+    width: 5em;
+    height: 5em;
+    margin-top: 2em;
+    margin-left: -45px;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <section class="center-content">
+
+    <section class="text-left">
+      <h1>Ginny and Georgia - Episode 3</h1>
+    </section>
+
+    <i class="faf fa-times" aria-hidden="true"></i>
+    <div class="loading"></div>
+    <section class="mask"></section>
+    <section class="bg-lp"></section>
+
+  </section>
+</body>
+
+<footer>
+</footer>
